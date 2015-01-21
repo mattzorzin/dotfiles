@@ -1,0 +1,10 @@
+updatehosts() { scp -q uptime-001.sendgrid.net:/tmp/hosts ~/.hosts ; }
+
+alias chef11="rvm use ruby-2.0.0-p451@chef11"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+source /Users/mattzorzin/.rvm/scripts/rvm
+
+# knife aliases / functionality
+sjcknife() { knife "$@" -c ~/.chef/sjcknife.rb ; }
+slknife() { knife "$@" -c ~/.chef/slknife.rb ; }
